@@ -10,6 +10,9 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Base is required for GitHub Pages project site at /<repo>/.
+  // With vite-plugin-singlefile the bundle is inlined, but we keep it explicit.
+  base: "/XOXO.COM/",
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
